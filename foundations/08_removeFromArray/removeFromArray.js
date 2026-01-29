@@ -1,8 +1,8 @@
-const removeFromArray = function(arr, a) {
+const removeFromArray = function(arr, ...Args) {
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] === Args){
+        if(Args.includes(arr[i])){
             arr.splice(i, 1);
-            i--; // Adjust index after removal
+            i--;
         }
     }
     return arr;
